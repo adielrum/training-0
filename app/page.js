@@ -3,7 +3,8 @@ import Head from 'next/head';
 import React from 'react';
 import Image from 'next/image';
 import backgroundImage from '../public/background.jpg'; // Adjust the path if necessary
-import gifImage from '../public/gif_0.gif'; // Import the GIF
+import gifImage0 from '../public/gif_0.gif'; // Import the initial GIF
+import gifImage1 from '../public/gif_1.gif'; // Import the new GIF
 
 function HomePage() {
   const [response, setResponse] = React.useState(null);
@@ -38,7 +39,7 @@ function HomePage() {
       </h1>
       <div className="mb-8">
         <Image 
-          src={gifImage}
+          src={response ? gifImage1 : gifImage0} // Conditionally render the GIF
           alt="GIF"
           width={200} // Adjust the width as needed
           height={200} // Adjust the height as needed
@@ -48,14 +49,14 @@ function HomePage() {
       <div className="flex justify-center">
         <button 
           onClick={handleYesClick} 
-          className="bg-green-500 text-white w-24 h-16 rounded-lg shadow-lg text-lg mr-5"
+          className="bg-green-500 text-white w-24 h-12 rounded-lg shadow-lg text-lg mr-5"
         >
           YES
         </button>
         <button
           id="no-button"
           onMouseOver={handleNoHover}
-          className="bg-red-500 text-white w-24 h-16 rounded-lg shadow-lg text-lg ml-5"
+          className="bg-red-500 text-white w-24 h-12 rounded-lg shadow-lg text-lg ml-5"
         >
           g dulu
         </button>
