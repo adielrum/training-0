@@ -33,7 +33,7 @@ function HomePage() {
         quality={100}
         className="z-[-1]"
       />
-      <h2 className="mb-2 text-[28px]">To: Muhammad Zakkiy 10123004</h2> {/* Added line */}
+      <h2 className="mb-2 text-[28px]">To: Muhammad Zakkiy 10122074</h2> {/* Added line */}
       <h1 className="mb-8 text-[32px]">
         {response || 'Will you be my Teacher, Mentor, Kajahim, and a Friend?'}
       </h1>
